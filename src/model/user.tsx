@@ -1,4 +1,4 @@
-class User{
+export interface User{
     name: String;
     description:String;
     imageLocation:String;

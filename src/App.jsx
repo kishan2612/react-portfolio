@@ -1,9 +1,17 @@
 import React from 'react'
-import portfolioNavBar from './components/portfolioNavBar'
+import PortfolioNavBar from './components/portfolioNavBar'
+import PortfolioPage1 from './components/portfolio/PortfolioPage1'
 
  const App = () => {
   return (
-   portfolioNavBar
+   <div>
+    <div>
+    <PortfolioNavBar/>
+    </div>
+    <div>
+    <PortfolioPage1/>
+    </div>
+   </div>
   )
 }
 export default App

@@ -5,7 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        alfaSlab: ['Alfa Slab One','serif'],  // Google Font Example
+      },
+      fontSize:{
+        '10xl': '12rem',   // Custom size 10xl
+        '11xl': '14rem',   // Custom size 11xl
+        '12xl': '16rem',   // Custom size 12xl
+      }
+    },
   },
   plugins: [],
 }
