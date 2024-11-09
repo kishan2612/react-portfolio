@@ -1,8 +1,9 @@
 import React from 'react'
+import portfolioNavBar from './components/portfolioNavBar'
 
  const App = () => {
   return (
-   <div className='bg-indigo-500'></div>
+   portfolioNavBar
   )
 }
 export default App
