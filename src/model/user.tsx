@@ -1,6 +1,7 @@
 export interface User{
-    name: String;
-    description:String;
-    imageLocation:String;
-    highlightSkills:Array<String>;
+    name: string;
+    description:string;
+    imageLocation:string;
+    highlightSkills:Array<string>;
+    primaryColor:string;
 }

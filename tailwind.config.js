@@ -3,11 +3,13 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/assets/"
   ],
   theme: {
     extend: {
       fontFamily: {
-        alfaSlab: ['Alfa Slab One','serif'],  // Google Font Example
+        alfaSlab: ['Alfa Slab One','serif'], 
+        spaceGrotesk:["Space Grotesk","serif"] // Google Font Example
       },
       fontSize:{
         '10xl': '12rem',   // Custom size 10xl
