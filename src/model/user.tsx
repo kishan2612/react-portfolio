@@ -21,4 +21,10 @@ export interface WorkExperience {
     websiteName:string,
     websiteLink:string
   }
+
+  export interface WorkProject{
+    projectName:string,
+    mainImageLocation:string,
+    longDescription:string
+  }
   

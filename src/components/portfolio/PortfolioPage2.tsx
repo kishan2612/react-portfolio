@@ -1,6 +1,8 @@
 import React from 'react';
 import { userKishan } from '../../constants/UserInformation'
 import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { PiStarFourFill } from "react-icons/pi";
+import ProjectMarquee from './ProjectMarquee';
 
 const PortfolioPage2 = () => {
     return (
@@ -22,6 +24,7 @@ const PortfolioPage2 = () => {
                 </div>
             </div>
             <ContactTable />
+            <FeaturedWorks/>
         </div>
     );
 };
@@ -90,5 +93,19 @@ const ContactTable = () => {
     );
 
 };
+
+const FeaturedWorks = () =>{
+    return (
+        <div className='py-10'>
+            <div className='flex justify-center py-10'>
+            <PiStarFourFill className='fill-purple-300 size-12' />
+            </div>
+            <ProjectMarquee/>
+
+
+        </div>
+    );
+}
+  
 
 export default PortfolioPage2;

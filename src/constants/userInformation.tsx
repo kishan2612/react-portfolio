@@ -23,7 +23,7 @@ import profileImage from "../assets/placeHolderImg.png";
     },
   ];
 
-  const connectionMethods : ConnectionMedium[]=[
+  const kishanConnectionMethods : ConnectionMedium[]=[
     {
         websiteName:"LinkedIn",
         websiteLink:"https://www.linkedin.com/in/kishan-v-a913191b7/"
@@ -35,6 +35,8 @@ import profileImage from "../assets/placeHolderImg.png";
   ];
 
 
+
+
 export const userKishan : User = {
     name:"Kishan",
     highlightSkills:["Flutter", "React","UI/UX","Figma"],
@@ -43,6 +45,8 @@ export const userKishan : User = {
     primaryColor:"#D8B4FE",
     longDescription:"I am a Mobile Application Developer with industry experience in building large scale B2B & B2C applications. I specialise in design & development of Android, IOS & Android TV applications using native android and flutter.",
     workExperiences:workExperiences,
-    connectionsMediums:connectionMethods
+    connectionsMediums:kishanConnectionMethods
 };
+
+
 

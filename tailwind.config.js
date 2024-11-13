@@ -15,6 +15,15 @@ export default {
         '10xl': '12rem',   // Custom size 10xl
         '11xl': '14rem',   // Custom size 11xl
         '12xl': '16rem',   // Custom size 12xl
+      },
+      animation: {
+        marquee: 'marquee 30s linear infinite',
+      },
+      keyframes:{
+        marquee: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        }
       }
     },
   },
