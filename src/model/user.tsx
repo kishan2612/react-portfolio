@@ -7,6 +7,7 @@ export interface User{
     primaryColor:string;
     workExperiences:Array<WorkExperience>
     connectionsMediums:Array<ConnectionMedium>
+    workProjects: Array<WorkProject>
 }
 
 

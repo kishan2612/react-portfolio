@@ -3,6 +3,7 @@ import { userKishan } from '../../constants/UserInformation'
 import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { PiStarFourFill } from "react-icons/pi";
 import ProjectMarquee from './ProjectMarquee';
+import ProjectList from './ProjectList';
 
 const PortfolioPage2 = () => {
     return (
@@ -101,7 +102,7 @@ const FeaturedWorks = () =>{
             <PiStarFourFill className='fill-purple-300 size-12' />
             </div>
             <ProjectMarquee/>
-
+            <ProjectList/>
 
         </div>
     );
