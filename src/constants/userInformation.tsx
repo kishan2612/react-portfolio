@@ -62,7 +62,7 @@ import projectPlaceHolder from "../assets/project-place-holder.jpg"
 
 export const userKishan : User = {
     name:"Kishan",
-    highlightSkills:["Flutter", "React","UI/UX","Figma"],
+    highlightSkills:["Flutter", "React","Kotlin multiplatform","Architecture","UI/UX","Figma",],
     shortDescription:"I'm Lead Mobile application developer based on Bangalore,India",
     imageLocation:profileImage,
     primaryColor:"#D8B4FE",
