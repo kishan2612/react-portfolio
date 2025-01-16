@@ -7,24 +7,16 @@ import { userKishan } from '../../constants/UserInformation'
 
 const PortfolioRootPage = () => {
     return (
-        <div className="relative">
-            {/* Fixed PortfolioPage1 */}
-            <div 
-                className="fixed top-0 left-0 w-full h-screen z-10 overflow-hidden"
-                style={{ background: userKishan.primaryColor }}
-            >
+        <div className="overflow-y-auto">
+            {/* Page 1 */}
+            <div className="h-screen">
                 <PortfolioPage1 />
             </div>
 
-            {/* Scrolling PortfolioPage2 */}
-            <motion.div
-                className="relative z-20"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-            >
+            {/* Page 2 */}
+            <div className="h-screen">
                 <PortfolioPage2 />
-            </motion.div>
+            </div>
         </div>
     );
 };

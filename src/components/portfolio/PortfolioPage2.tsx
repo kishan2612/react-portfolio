@@ -24,8 +24,9 @@ const PortfolioPage2 = () => {
                     <ExperienceList />
                 </div>
             </div>
+            <ExpertiseTable />
             <ContactTable />
-            <FeaturedWorks/>
+            <FeaturedWorks />
         </div>
     );
 };
@@ -51,6 +52,46 @@ const ExperienceList = () => {
         </div>
     );
 };
+
+const ExpertiseTable = () => {
+    return (
+        <div className="my-20">
+            <div className="text-2xl font-bold mb-8 mt-8 text-white font-spaceGrotesk text-center">Skills</div>
+
+            {/* Grid container with a gradient flare */}
+            <div className="relative my-8 mx-16">
+                {/* Gradient flare */}
+                <div
+                    className="absolute inset-0 z-0 pointer-events-none rounded-lg"
+                    style={{
+                        background: "radial-gradient(circle, rgba(157, 68, 252,0.8) 0%, transparent 70%)",
+                        opacity: 0.8,
+                    }}
+                ></div>
+
+                {/* Grid */}
+                <div className="relative z-10 grid grid-cols-4 gap-4 py-8">
+                    {userKishan.highlightSkills.slice(0, 12).map((skill, index) => (
+                        <div
+                            key={index}
+                            className="px-4 py-8 r®ounded-2xl font-semibold text-center"
+                            style={{
+                                backgroundColor: "#1a1a1a", // Ensures solid color for the cards
+                                color: "#ffffff", // Ensures bright white text
+                             
+                                
+                            }}
+                        >
+                            {skill}
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+
 
 const ContactTable = () => {
     const handleClick = (link: string) => {
@@ -95,18 +136,18 @@ const ContactTable = () => {
 
 };
 
-const FeaturedWorks = () =>{
+const FeaturedWorks = () => {
     return (
         <div className='py-10'>
             <div className='flex justify-center py-10'>
-            <PiStarFourFill className='fill-purple-300 size-12' />
+                <PiStarFourFill className='fill-purple-300 size-12' />
             </div>
-            <ProjectMarquee/>
-            <ProjectList/>
+            <ProjectMarquee />
+            <ProjectList />
 
         </div>
     );
 }
-  
+
 
 export default PortfolioPage2;

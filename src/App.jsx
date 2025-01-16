@@ -6,6 +6,7 @@ import PortfolioPage1 from './components/portfolio/PortfolioPage1';
 import PortfolioAboutPage from './components/portfolio/PortfolioAboutPage';
 import PortfolioWorkPage from './components/portfolio/PortfolioWorkPage';
 import PortfolioContactPage from './components/portfolio/PortfolioContactPage';
+import PortfolioRootPage from './components/portfolio/PortfolioRootPage';
 
 const App = () => {
   return (
@@ -19,11 +20,11 @@ const App = () => {
       <div className="pt-20"> {/* Add padding to avoid overlap with the fixed navbar */}
         <Routes>
           {/* Define routes */}
-          <Route path="/" element={<PortfolioPage1 />} /> {/* Default route */}
+          <Route path="/" element={<PortfolioRootPage />} /> {/* Default route */}
           <Route path="/about" element={<PortfolioAboutPage />} />
           <Route path="/work" element={<PortfolioWorkPage />} />
           <Route path="/contact" element={<PortfolioContactPage />} />
-          <Route path="/home" element={<PortfolioPage1/>}/>
+          <Route path="/home" element={<PortfolioRootPage/>}/>
         </Routes>
       </div>
     </div>
