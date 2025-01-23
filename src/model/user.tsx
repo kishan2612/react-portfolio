@@ -8,6 +8,8 @@ export interface User{
     workExperiences:Array<WorkExperience>
     connectionsMediums:Array<ConnectionMedium>
     workProjects: Array<WorkProject>
+    slogan1:string,
+    slogan2:string
 }
 
 

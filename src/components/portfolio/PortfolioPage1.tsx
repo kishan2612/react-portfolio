@@ -1,16 +1,17 @@
 import React from 'react'
-import { userKishan } from '../../constants/UserInformation'
 import { AppColors } from '../../constants/AppColors'
+import TypewriterText from '../widgets/TypeWriterText';
+import { User } from '../../model/user';
 
-const PortfolioPage1 = () => {
+const PortfolioPage1 = ({ user }: { user: User })  => {
     return (
-        <div className='relative'
-            style={{ background: userKishan.primaryColor, height: 'calc(100vh - 6rem)' }}>
+        <div className='relative mt-24'
+            style={{ background: user.primaryColor, height: 'calc(100vh - 6rem)' }}>
 
             <div className='justify-center'>
                 <h1 className='text-black text-center font-alfaSlab font-bold tracking-wider'
                     style={{ fontSize: '18vw', lineHeight: '1em' }}>
-                    {userKishan.name.toUpperCase()}
+                    {user.name.toUpperCase()}
 
                 </h1>
             </div>
@@ -20,22 +21,31 @@ const PortfolioPage1 = () => {
 
 
             <div className="absolute top-32 left-1/2 w-1/3 transform -translate-x-1/2 rounded-2xl overflow-hidden"
-            style={{borderWidth:"12px",borderColor: AppColors.secondaryBackground,backgroundColor:AppColors.secondaryBackground}}>
+            style={{borderWidth:"12px",borderColor: user.primaryColor,backgroundColor:AppColors.secondaryBackground}}>
                 <img
-                    src={userKishan.imageLocation}
+                    src={user.imageLocation}
                     alt="Image Description"
-                    className="object-cover w-full rounded-xl"
-                    style={{ height: '75.00vh' }}
+                    className="object-cover w-full rounded-md"
+                    style={{ height: '70.00vh' }}
                 />
             </div>
 
             {/* Text description at the bottom left */}
-            <div className="absolute bottom-8 left-0 pl-24  pr-16 pb-16 w-1/3">
-                <p className="text-black text-lg font-normal line-clamp-4">{userKishan.shortDescription}</p>
+            <div className="absolute bottom-4 left-0 pl-16 pb-8">
+                <p className="text-black text-lg font-normal line-clamp-4">
+                    <TypewriterText text={user.slogan1}></TypewriterText>
+
+                </p>
             </div>
+
+             {/* Text description at the bottom right */}
+             <div className="absolute bottom-4 right-0 pr-16 pb-8">
+             <TypewriterText text={user.slogan2}></TypewriterText>
+             </div>
 
         </div>
     )
+    
 }
 
 export default PortfolioPage1

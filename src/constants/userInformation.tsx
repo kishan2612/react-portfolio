@@ -65,11 +65,13 @@ export const userKishan: User = {
   highlightSkills: ["Flutter", "Native Android", "React", "Android TV", "Kotlin multiplatform", "State Management", "Firebase", "App Performance", "Analytics", "Architecture", "UI/UX", "Figma",],
   shortDescription: "I'm Lead Mobile application developer based on Bangalore,India",
   imageLocation: profileImage,
-  primaryColor: "#D8B4FE",
+  primaryColor: "#FF998C",
   longDescription: "I am a Mobile Application Developer with industry experience in building large scale B2B & B2C applications. I specialise in design & development of Android, IOS & Android TV applications using native android and flutter.",
   workExperiences: workExperiences,
   connectionsMediums: kishanConnectionMethods,
-  workProjects: kishansProjects
+  workProjects: kishansProjects,
+  slogan1:"Design",
+  slogan2:"Development"
 };
 
 

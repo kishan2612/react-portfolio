@@ -1,12 +1,11 @@
 import React from 'react'
-import { userKishan } from "../constants/UserInformation"
-import { AppColors } from '../constants/AppColors'
+import { User } from '../model/user'
 
-const PortfolioNavBar = () => {
+const PortfolioNavBar = ({user}:{user:User}) => {
   return (
-    <nav className="bg-purple-300 h-24 flex items-center justify-between px-16">
+    <nav className=" h-24 flex items-center justify-between px-16" style={{backgroundColor:user.primaryColor}}>
       <div className="text-black text-2xl">
-        {userKishan.name}
+        {user.name}
       </div>
 
       {/* Navigation Links */}
@@ -23,7 +22,7 @@ const PortfolioNavBar = () => {
           <a
             href="/work"
             className="text-black relative group pb-1  text-xl font-extralight">
-            Work
+            About
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </a>
         </li>
@@ -31,7 +30,7 @@ const PortfolioNavBar = () => {
           <a
             href="/contact"
             className="text-black relative group pb-1  text-xl font-extralight">
-            Contact
+            Work
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </a>
         </li>

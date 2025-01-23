@@ -4,16 +4,19 @@ import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { PiStarFourFill } from "react-icons/pi";
 import ProjectMarquee from './ProjectMarquee';
 import ProjectList from './ProjectList';
+import { User } from '../../model/user';
 
-const PortfolioPage2 = () => {
+const PortfolioPage2 = ({ user }: { user: User })  => {
     return (
-        <div className="bg-black rounded-t-3xl  pb-8 mx-auto">
+        <div className="bg-black   pb-8 mx-auto" style={{
+            borderTopLeftRadius:32,borderTopRightRadius:32
+        }}>
             <div className="flex justify-between items-start space-x-4 py-16 px-16 ">
                 {/* Left Side: About Me */}
                 <div className="w-1/2 pr-16">
                     <h2 className="text-2xl font-bold mb-16 text-white font-spaceGrotesk">About Me</h2>
                     <p className="text-gray-300 leading-relaxed text-2xl text-start">
-                        {userKishan.longDescription} </p>
+                        {user.longDescription} </p>
                 </div>
 
                 {/* Divider */}
@@ -25,8 +28,9 @@ const PortfolioPage2 = () => {
                 </div>
             </div>
             <ExpertiseTable />
-            <ContactTable />
             <FeaturedWorks />
+            <ContactTable />
+
         </div>
     );
 };
@@ -107,7 +111,7 @@ const ContactTable = () => {
     return (
         <div>
             <div className='center'>
-                <h4 className="text-xl font-bold mb-8 text-white font-spaceGrotesk text-center">CONNECT WITH ME</h4>
+                <h4 className="text-xl font-bold mb-8 text-white font-spaceGrotesk text-center">Connect with me</h4>
             </div>
             <table className="min-w-min mb-8 mx-auto text-center border border-gray-700">
                 <tbody>

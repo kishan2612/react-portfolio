@@ -12,12 +12,10 @@ const App = () => {
   return (
     <div className='relative'>
       {/* Fixed Navbar */}
-      <div className="fixed top-0 left-0 w-full z-10">
-        <PortfolioNavBar />
-      </div>
+  
 
       {/* Main Content with Routing */}
-      <div className="pt-20"> {/* Add padding to avoid overlap with the fixed navbar */}
+      <div > {/* Add padding to avoid overlap with the fixed navbar */}
         <Routes>
           {/* Define routes */}
           <Route path="/" element={<PortfolioRootPage />} /> {/* Default route */}
