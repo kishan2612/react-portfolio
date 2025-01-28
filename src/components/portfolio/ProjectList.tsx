@@ -1,16 +1,22 @@
 import React from 'react'
 import { userKishan } from '../../constants/UserInformation'
 import { AiOutlineArrowRight } from "react-icons/ai";
-import { motion } from 'framer-motion';
+import { User } from '../../model/user';
 
-const ProjectList = () => {
+const ProjectList = ({user}:{user:User}) => {
     return (
         <div className="grid grid-cols-2 gap-x-2 gap-y-2 py-16 px-16">
             {
                 userKishan.workProjects.map((value) => (
                     <div
                         key={value.projectName}
-                        className="w-full bg-white rounded-3xl hover:bg-purple-300 hover:rounded-3xl overflow-hidden group"
+                        className="w-full bg-white rounded-3xl overflow-hidden group"
+                         onMouseEnter={(e) => {
+                            e.currentTarget.style.backgroundColor = userKishan.primaryColor;
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.backgroundColor = "#f0f0f0";
+                          }}
                     >
                         {/* Image */}
                         <div className="relative overflow-hidden rounded-t-3xl">

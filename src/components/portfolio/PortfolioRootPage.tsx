@@ -1,8 +1,6 @@
 import React from 'react'
 import PortfolioPage2 from './PortfolioPage2'
 import PortfolioPage1 from './PortfolioPage1'
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
 import { userKishan } from '../../constants/UserInformation'
 import PortfolioNavBar from '../portfolioNavBar';
 import { User } from '../../model/user';

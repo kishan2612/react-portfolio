@@ -6,7 +6,7 @@ import { User } from '../../model/user';
 const PortfolioPage1 = ({ user }: { user: User })  => {
     return (
         <div className='relative mt-24'
-            style={{ background: user.primaryColor, height: 'calc(100vh - 6rem)' }}>
+            style={{ background: user.primaryColor, height: 'calc(100vh - 2rem)' }}>
 
             <div className='justify-center'>
                 <h1 className='text-black text-center font-alfaSlab font-bold tracking-wider'
@@ -31,7 +31,7 @@ const PortfolioPage1 = ({ user }: { user: User })  => {
             </div>
 
             {/* Text description at the bottom left */}
-            <div className="absolute bottom-4 left-0 pl-16 pb-8">
+            <div className="absolute bottom-4 left-0 pl-16" style={{paddingBottom:"6em"}}>
                 <p className="text-black text-lg font-normal line-clamp-4">
                     <TypewriterText text={user.slogan1}></TypewriterText>
 
@@ -39,7 +39,7 @@ const PortfolioPage1 = ({ user }: { user: User })  => {
             </div>
 
              {/* Text description at the bottom right */}
-             <div className="absolute bottom-4 right-0 pr-16 pb-8">
+             <div className="absolute bottom-4 right-0 pr-16"  style={{paddingBottom:"6em"}}>
              <TypewriterText text={user.slogan2}></TypewriterText>
              </div>
 

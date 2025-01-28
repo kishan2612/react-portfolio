@@ -66,12 +66,12 @@ export const userKishan: User = {
   shortDescription: "I'm Lead Mobile application developer based on Bangalore,India",
   imageLocation: profileImage,
   primaryColor: "#FF998C",
-  longDescription: "I am a Mobile Application Developer with industry experience in building large scale B2B & B2C applications. I specialise in design & development of Android, IOS & Android TV applications using native android and flutter.",
+  longDescription: "As a Mobile Application Developer with over 7 years of experience, I specialize in building large-scale B2B and B2C applications. My expertise lies in designing and developing Android, iOS, and Android TV apps using both native Android and Flutter, ensuring seamless user experiences across all platforms. Alongside my technical skills, I’m proficient in Figma and React, having worked on various professional projects that merge design and functionality. When I'm not crafting the perfect app, you’ll find me immersed in the world of gaming, either on my PS5 or PC, constantly leveling up in the virtual world. Let’s create something amazing together!",
   workExperiences: workExperiences,
   connectionsMediums: kishanConnectionMethods,
   workProjects: kishansProjects,
-  slogan1:"Design",
-  slogan2:"Development"
+  slogan1: "Design",
+  slogan2: "Development"
 };
 
 

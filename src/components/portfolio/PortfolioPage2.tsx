@@ -2,38 +2,35 @@ import React from 'react';
 import { userKishan } from '../../constants/UserInformation'
 import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { PiStarFourFill } from "react-icons/pi";
-import ProjectMarquee from './ProjectMarquee';
+import ProjectMarquee from './ProjectTitle';
 import ProjectList from './ProjectList';
 import { User } from '../../model/user';
+import SkillListMarquee from './SkillMarquee';
+import ProjectTitle from './ProjectTitle';
 
-const PortfolioPage2 = ({ user }: { user: User })  => {
+const PortfolioPage2 = ({ user }: { user: User }) => {
     return (
         <div className="bg-black   pb-8 mx-auto" style={{
-            borderTopLeftRadius:32,borderTopRightRadius:32
+            borderTopLeftRadius: 32, borderTopRightRadius: 32
         }}>
-            <div className="flex justify-between items-start space-x-4 py-16 px-16 ">
-                {/* Left Side: About Me */}
-                <div className="w-1/2 pr-16">
-                    <h2 className="text-2xl font-bold mb-16 text-white font-spaceGrotesk">About Me</h2>
-                    <p className="text-gray-300 leading-relaxed text-2xl text-start">
-                        {user.longDescription} </p>
-                </div>
 
-                {/* Divider */}
+            <About about={user.longDescription} />
+            <Page2Divider color={user.primaryColor}/>
 
-
-                {/* Right Side: Work Experience */}
-                <div className="w-1/2 pl-16">
-                    <ExperienceList />
-                </div>
-            </div>
-            <ExpertiseTable />
-            <FeaturedWorks />
-            <ContactTable />
+            <ExpertiseTable user={user} />
+            <FeaturedWorks user={user} />
+            <ContactTable user={user} />
 
         </div>
     );
 };
+
+const About = ({ about }: { about: string }) => {
+    return <div className='pt-4'>
+        <ProjectTitle title={"About"} />
+        <p className='text-gray-200 px-16 text-lg '>{about}</p>
+    </div>
+}
 
 const ExperienceList = () => {
     return (
@@ -57,47 +54,17 @@ const ExperienceList = () => {
     );
 };
 
-const ExpertiseTable = () => {
+const ExpertiseTable = ({ user }: { user: User }) => {
     return (
-        <div className="my-20">
-            <div className="text-2xl font-bold mb-8 mt-8 text-white font-spaceGrotesk text-center">Skills</div>
-
-            {/* Grid container with a gradient flare */}
-            <div className="relative my-8 mx-16">
-                {/* Gradient flare */}
-                <div
-                    className="absolute inset-0 z-0 pointer-events-none rounded-lg"
-                    style={{
-                        background: "radial-gradient(circle, rgba(157, 68, 252,0.8) 0%, transparent 70%)",
-                        opacity: 0.8,
-                    }}
-                ></div>
-
-                {/* Grid */}
-                <div className="relative z-10 grid grid-cols-4 gap-4 py-8">
-                    {userKishan.highlightSkills.slice(0, 12).map((skill, index) => (
-                        <div
-                            key={index}
-                            className="px-4 py-8 r®ounded-2xl font-semibold text-center"
-                            style={{
-                                backgroundColor: "#1a1a1a", // Ensures solid color for the cards
-                                color: "#ffffff", // Ensures bright white text
-                             
-                                
-                            }}
-                        >
-                            {skill}
-                        </div>
-                    ))}
-                </div>
-            </div>
+        <div>
+            <SkillListMarquee user={user} />
         </div>
     );
 };
 
 
 
-const ContactTable = () => {
+const ContactTable = ({ user }: { user: User }) => {
     const handleClick = (link: string) => {
         if (link.startsWith("mailto:")) {
             // Open email client
@@ -140,18 +107,21 @@ const ContactTable = () => {
 
 };
 
-const FeaturedWorks = () => {
+const FeaturedWorks = ({ user }: { user: User }) => {
     return (
-        <div className='py-10'>
-            <div className='flex justify-center py-10'>
-                <PiStarFourFill className='fill-purple-300 size-12' />
-            </div>
-            <ProjectMarquee />
-            <ProjectList />
+        <div>
+            <Page2Divider color={user.primaryColor}/>
+            <ProjectTitle title={"Highlights"} />
+            <ProjectList user={user} />
 
         </div>
     );
 }
-
-
+function Page2Divider({ color }: { color: string }) {
+    return (
+        <div className='flex justify-center py-24'>
+            <PiStarFourFill className='text-6xl' style={{ fill: color }} />
+        </div>
+    );
+}
 export default PortfolioPage2;
