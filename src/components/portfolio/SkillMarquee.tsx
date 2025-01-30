@@ -1,6 +1,7 @@
 import React from 'react'
 import Marquee from "react-fast-marquee";
 import { User } from '../../model/user';
+import ProjectTitle from './ProjectTitle';
 
 
 const SkillListMarquee = ({user}:{user:User}) => {
@@ -11,6 +12,8 @@ const SkillListMarquee = ({user}:{user:User}) => {
     user.highlightSkills.slice(rowIndex * itemsPerRow, (rowIndex + 1) * itemsPerRow)
   );
   return (
+    <div>
+      <div className='mb-8'><ProjectTitle title='Expertise'/></div>
     <div className="skill-marquee-container">
       {skillRows.map((rowSkills, index) => (
         <div className=''
@@ -29,6 +32,7 @@ const SkillListMarquee = ({user}:{user:User}) => {
           </Marquee>
         </div>
       ))}
+    </div>
     </div>
   );
 }

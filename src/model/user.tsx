@@ -28,5 +28,7 @@ export interface ConnectionMedium {
 export interface WorkProject {
   projectName: string,
   mainImageLocation: string,
-  longDescription: string
+  longDescription: string,
+  shortDescription:string,
+  
 }
