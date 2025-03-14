@@ -3,6 +3,7 @@ import PortfolioAboutPage from "./pages/PortfolioAboutPage.tsx";
 import PortfolioWorkPage from "./components/portfolio/PortfolioWorkPage.tsx";
 import PortfolioContactPage from "./pages/PortfolioContactPage.tsx";
 import PortfolioRootPage from "./pages/PortfolioRootPage";
+import ProjectDetailPage from "./pages/ProjectDetail.tsx";
 const App = () => {
   return (
     <div className='relative'>
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/work" element={<PortfolioWorkPage />} />
           <Route path="/contact" element={<PortfolioContactPage />} />
           <Route path="/home" element={<PortfolioRootPage/>}/>
+          <Route path="/works/:projectId" element={<ProjectDetailPage />} />
         </Routes>
       </div>
     </div>

@@ -1,6 +1,6 @@
-import {ConnectionMedium, User, WorkExperience} from "../model/user";
+import {ConnectionMedium, User, WorkExperience} from "../model/User.ts";
 import {Project} from "../model/Project";
-import AssetLocation from "./AssetLocation.tsx";
+import AssetLocation from "./AssetLocation.ts";
 
 //kishan work experience
 const workExperiences: WorkExperience[] = [
@@ -38,7 +38,7 @@ const kishanConnectionMethods: ConnectionMedium[] = [
 
 const kishanProjects: Project[] = [
     {
-        id: 1,
+        id: "k-1",
         projectName: "Mi-Retail",
         mainImageLocation: AssetLocation.projectPlaceHolderImage,
         shortDescription: "Mi Retail is a comprehensive retail management app designed to optimize sales, inventory," +
@@ -64,7 +64,7 @@ const kishanProjects: Project[] = [
             "navigation and optimizes workflows for faster order processing and inventory management."
     },
     {
-        id: 2,
+        id: "k-2",
         projectName: "Xiaomi Service+",
         mainImageLocation: AssetLocation.projectPlaceHolderImage,
         shortDescription: "Xiaomi Service+ is an all-in-one after-sales service platform designed to enhance customer " +
@@ -93,7 +93,7 @@ const kishanProjects: Project[] = [
             "ensures a seamless, hassle-free service experience by integrating essential features with an intuitive user interface."
     },
     {
-        id: 3,
+        id: "k-3",
         projectName: "ServOps",
         mainImageLocation: AssetLocation.projectPlaceHolderImage,
         shortDescription: "ServOps is Xiaomi's field service management application designed to streamline service operations, " +
@@ -116,7 +116,7 @@ const kishanProjects: Project[] = [
             "real-time communication, and streamlined workflows."
     },
     {
-        id: 4,
+        id: "k-4",
         projectName: "Xiaomi Employee Sales",
         mainImageLocation: AssetLocation.projectPlaceHolderImage,
         shortDescription: "Xiaomi Employee Sales Portal is a web-based platform designed to facilitate exclusive sales, " +
@@ -139,7 +139,7 @@ const kishanProjects: Project[] = [
             "highly responsive and scalable shopping experience tailored for Xiaomi's workforce."
     },
     {
-        id: 5,
+        id: "k-5",
         projectName: "Mi Smart Demo",
         mainImageLocation: AssetLocation.projectPlaceHolderImage,
         shortDescription: "Mi Smart Demo is an in-house retail demo application designed for Xiaomi offline stores, " +
@@ -161,7 +161,7 @@ const kishanProjects: Project[] = [
             "linked to a **real-time CMS**, allowing instant content updates across all devices."
     },
     {
-        id: 6,
+        id: "k-6",
         projectName: "idfye",
         mainImageLocation: AssetLocation.projectPlaceHolderImage,
         shortDescription: "idfye is a platform that connects employees and employers, facilitating collaboration, work reporting, and productivity analysis. It includes features like daily attendance tracking and more.",

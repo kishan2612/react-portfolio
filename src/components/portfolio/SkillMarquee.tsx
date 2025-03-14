@@ -1,5 +1,5 @@
 import Marquee from "react-fast-marquee";
-import {User} from '../../model/user';
+import {User} from '../../model/User.ts';
 import ProjectTitle from './ProjectTitle';
 
 

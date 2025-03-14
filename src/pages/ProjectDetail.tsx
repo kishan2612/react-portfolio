@@ -1,44 +1,88 @@
 import {useParams} from "react-router-dom";
-import {motion} from "framer-motion";
-import {Project} from "../model/Project";
+import {getUserSelectedProject} from "../components/portfolio/project/UserProject.ts";
+import {Project} from "../model/Project.ts";
+import PortfolioNavBar from "../components/PortfolioNavBar.tsx";
+import {userKishan} from "../constants/KishanUserInformation.ts";
 
-const ProjectDetailPage = ({project}: { project: Project }) => {
-    const {projectId} = useParams();
+const ProjectDetailPage = () => {
+    const {projectId} = useParams(); // Extract project ID from URL
+
+    if (projectId) {
+        const project: Project | undefined | null = getUserSelectedProject(projectId)
+
+        if (project) {
+            return (
+                <div className="w-full  min-h-screen bg-black text-white font-sans">
+                     Navigation Bar
+                    <header className="fixed top-0 left-0 w-full">
+                       <PortfolioNavBar user={userKishan} showActionItems={false}/>
+                    </header>
+
+                    {/* Main Content */}
+                    <div className=" mx-auto  px-16 md:px-16 pb-24 pt-28">
+                        {/* Project Name */}
+                        <h1 className="md:text-6xl font-bold mb-12 mt-16 text-start font-alfaSlab" style={
+                            {fontSize: "7rem"}
+                        }>{project.projectName}</h1>
+
+                        {/* Short Description */}
+                        <p className="text-xl text-gray-300 text-start mb-16">{project.shortDescription}</p>
+
+                        {/* Grid Layout for Details */}
+                        <div className="grid md:grid-cols-2 gap-12">
+                            {/* Left Column: Project Details */}
+                            <div>
+                                <h2 className="text-2xl font-semibold mb-12 text-gray-200" >Project Details</h2>
+                                <ul className="space-y-6 text-lg text-gray-400">
+                                    <li><strong>Role:</strong> {project.role}</li>
+                                    <li><strong>Timeline:</strong> {project.duration}</li>
+                                    <li><strong>Technologies:</strong> {project.technologies.join(", ")}</li>
+                                </ul>
+                            </div>
+
+                            {/* Right Column: Features */}
+                            <div>
+                                <h2 className="text-2xl font-semibold mb-12 text-gray-200">Features</h2>
+                                <ul className="space-y-6 text-lg text-gray-400">
+                                    {project.features.map((feature, _) => (
+                                        <li key={feature} className="flex items-center">
+                                             <span className="ml-2">{feature}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+
+                        {/* Long Description */}
+                        <div className="mt-16">
+                            <h2 className="text-2xl font-semibold mb-4 text-gray-200">About This Project</h2>
+                            <p className="text-lg text-gray-300 leading-relaxed">{project.longDescription}</p>
+                        </div>
 
 
-    return (
-        <div className="min-h-screen bg-black text-white font-sans">
-            {/* Hero Section */}
-            <div className="relative h-screen flex flex-col items-center justify-center text-center px-6">
-                <motion.img
-                    src={project.mainImageLocation}
-                    alt={project.projectName}
-                    className="absolute inset-0 w-full h-full object-cover opacity-30"
-                    initial={{opacity: 0}}
-                    animate={{opacity: 1}}
-                    transition={{duration: 1.5}}
-                />
-                <motion.h1 className="text-5xl font-bold z-10" initial={{y: 50, opacity: 0}}
-                           animate={{y: 0, opacity: 1}}>
-                    {project.projectName}
-                </motion.h1>
-                <motion.p className="text-lg mt-4 max-w-2xl z-10" initial={{y: 50, opacity: 0}}
-                          animate={{y: 0, opacity: 1}}>
-                    {project.shortDescription}
-                </motion.p>
-            </div>
+                        {/* Screenshots Gallery */}
+                        <div className="mt-16">
+                            <h2 className="text-2xl font-semibold mb-4 text-gray-200">Screenshots</h2>
+                            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                {project.screenshots.map((screenshot, index) => (
+                                    <img
+                                        key={screenshot}
+                                        src={screenshot}
+                                        alt={`Screenshot ${index + 1}`}
+                                        className="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-105 transition-transform"
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        } else {
+            return <h1>Project Not Found</h1>;
+        }
+    }
 
-            {/* Project Details */}
-            <div className="max-w-5xl mx-auto py-20 px-6">
-                <motion.div className="mb-16" initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 0.3}}>
-                    <h2 className="text-3xl font-semibold mb-4">Project Overview</h2>
-                    <p className="text-lg mb-6">{project.longDescription}</p>
-                    <img src={project.mainImageLocation} alt={project.projectName}
-                         className="w-full rounded-lg shadow-lg"/>
-                </motion.div>
-            </div>
-        </div>
-    );
+
 };
 
 export default ProjectDetailPage;

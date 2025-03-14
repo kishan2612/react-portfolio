@@ -1,11 +1,12 @@
-import {userKishan} from "../../constants/UserInformation";
+
 import {FaEnvelope, FaLinkedin} from "react-icons/fa";
 import {PiStarFourFill} from "react-icons/pi";
 import ProjectTitle from "./ProjectTitle";
 import ProjectList from "./project/ProjectList";
-import {User} from "../../model/user";
+import {User} from "../../model/User.ts";
 import SkillListMarquee from "./SkillMarquee";
 import ExperienceList from "./ExperienceList";
+import {userKishan} from "../../constants/KishanUserInformation.ts";
 
 const PortfolioPage2 = ({ user }: { user: User }) => {
   return (
@@ -94,7 +95,7 @@ const FeaturedWorks = ({ user }: { user: User }) => {
     <div>
       <Page2Divider color={user.primaryColor} />
       <ProjectTitle title={"Highlights"} />
-      <ProjectList user={user} />
+      <ProjectList/>
     </div>
   );
 };

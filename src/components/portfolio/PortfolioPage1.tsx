@@ -1,6 +1,6 @@
-import { AppColors } from '../../constants/AppColors'
+import { AppColors } from '../../constants/AppColors.ts'
 import TypewriterText from '../widgets/TypeWriterText';
-import { User } from '../../model/user';
+import { User } from '../../model/User.ts';
 
 const PortfolioPage1 = ({ user }: { user: User })  => {
     return (
@@ -23,10 +23,9 @@ const PortfolioPage1 = ({ user }: { user: User })  => {
             style={{borderWidth:"12px",borderColor: user.primaryColor,backgroundColor:AppColors.secondaryBackground}}>
                 <img
                     src={user.imageLocation}
-                    alt="Image Description"
                     className="object-cover w-full rounded-md"
                     style={{ height: '70.00vh' }}
-                />
+                 alt=""/>
             </div>
 
             {/* Text description at the bottom left */}

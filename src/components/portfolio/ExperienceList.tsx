@@ -1,4 +1,4 @@
-import {User} from "../../model/user";
+import {User} from "../../model/User.ts";
 import ProjectTitle from "./ProjectTitle";
 import {motion} from "framer-motion";
 import {FaBriefcase} from "react-icons/fa";
@@ -21,7 +21,7 @@ function CareerTimeline({ user }: Readonly<{ user: User }>) {
           ></div>
           {user.workExperiences.map((experience, index) => (
             <motion.div
-              key={index}
+              key={experience.company}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
