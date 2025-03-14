@@ -1,8 +1,7 @@
-import React from "react";
-import { User, WorkExperience } from "../../model/user";
+import {User} from "../../model/user";
 import ProjectTitle from "./ProjectTitle";
-import { motion } from "framer-motion";
-import { FaBriefcase } from "react-icons/fa";
+import {motion} from "framer-motion";
+import {FaBriefcase} from "react-icons/fa";
 
 const ExperienceList = ({ user }: { user: User }) => {
   return (
@@ -12,7 +11,7 @@ const ExperienceList = ({ user }: { user: User }) => {
     </div>
   );
 };
-function CareerTimeline({ user }: { user: User }) {
+function CareerTimeline({ user }: Readonly<{ user: User }>) {
     return (
       <div className="max-w-4xl mx-auto">
         <div className="relative flex flex-col items-center">

@@ -1,13 +1,8 @@
-// App.jsx
-import React from 'react';
-import { Routes, Route } from 'react-router-dom'; // Import Routes and Route for navigation
-import PortfolioNavBar from './components/PortfolioNavBar';
-import PortfolioPage1 from './components/portfolio/PortfolioPage1';
-import PortfolioAboutPage from './components/portfolio/PortfolioAboutPage';
-import PortfolioWorkPage from './components/portfolio/PortfolioWorkPage';
-import PortfolioContactPage from './components/portfolio/PortfolioContactPage';
-import PortfolioRootPage from './components/portfolio/PortfolioRootPage';
-
+import {Route, Routes} from 'react-router-dom';
+import PortfolioAboutPage from "./pages/PortfolioAboutPage.tsx";
+import PortfolioWorkPage from "./components/portfolio/PortfolioWorkPage.tsx";
+import PortfolioContactPage from "./pages/PortfolioContactPage.tsx";
+import PortfolioRootPage from "./pages/PortfolioRootPage";
 const App = () => {
   return (
     <div className='relative'>

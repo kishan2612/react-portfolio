@@ -1,9 +1,8 @@
-import React from 'react'
-import PortfolioPage2 from './PortfolioPage2'
-import PortfolioPage1 from './PortfolioPage1'
-import { userKishan } from '../../constants/UserInformation'
-import PortfolioNavBar from '../portfolioNavBar';
-import { User } from '../../model/user';
+import { userKishan } from '../constants/userInformation'
+import PortfolioNavBar from '../components/portfolioNavBar';
+import { User } from '../model/user';
+import PortfolioPage1 from "../components/portfolio/PortfolioPage1.tsx";
+import PortfolioPage2 from "../components/portfolio/PortfolioPage2.tsx";
 
 const PortfolioRootPage = () => {
     const user:User = userKishan

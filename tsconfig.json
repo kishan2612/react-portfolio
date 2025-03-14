@@ -1,0 +1,48 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./public",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": false,
+    "strictPropertyInitialization": true,
+    "experimentalDecorators": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "node",
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": false,
+    "importHelpers": true,
+    "noImplicitThis": false,
+    "suppressImplicitAnyIndexErrors": false,
+    "skipLibCheck": true,
+    "noResolve": false,
+    "module": "es2015",
+    "allowJs": true,
+    "target": "es5",
+    "jsx": "react",
+    "lib": [
+      "es5",
+      "es2015",
+      "dom",
+      "es7",
+      "es2018"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}

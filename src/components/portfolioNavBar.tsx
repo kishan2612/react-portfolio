@@ -1,4 +1,3 @@
-import React from 'react'
 import { User } from '../model/user'
 
 const PortfolioNavBar = ({user}:{user:User}) => {

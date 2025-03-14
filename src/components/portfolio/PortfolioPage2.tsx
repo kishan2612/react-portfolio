@@ -1,12 +1,10 @@
-import React from "react";
-import { userKishan } from "../../constants/UserInformation";
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
-import { PiStarFourFill } from "react-icons/pi";
-import ProjectMarquee from "./ProjectTitle";
-import ProjectList from "./ProjectList";
-import { User } from "../../model/user";
-import SkillListMarquee from "./SkillMarquee";
+import {userKishan} from "../../constants/UserInformation";
+import {FaEnvelope, FaLinkedin} from "react-icons/fa";
+import {PiStarFourFill} from "react-icons/pi";
 import ProjectTitle from "./ProjectTitle";
+import ProjectList from "./project/ProjectList";
+import {User} from "../../model/user";
+import SkillListMarquee from "./SkillMarquee";
 import ExperienceList from "./ExperienceList";
 
 const PortfolioPage2 = ({ user }: { user: User }) => {
@@ -25,7 +23,7 @@ const PortfolioPage2 = ({ user }: { user: User }) => {
       <Page2Divider color={user.primaryColor} />
       <ExpertiseTable user={user} />
       <FeaturedWorks user={user} />
-      <ContactTable user={user} />
+      <ContactTable />
     </div>
   );
 };
@@ -47,7 +45,7 @@ const ExpertiseTable = ({ user }: { user: User }) => {
   );
 };
 
-const ContactTable = ({ user }: { user: User }) => {
+const ContactTable = () => {
   const handleClick = (link: string) => {
     if (link.startsWith("mailto:")) {
       // Open email client
@@ -100,7 +98,7 @@ const FeaturedWorks = ({ user }: { user: User }) => {
     </div>
   );
 };
-function Page2Divider({ color }: { color: string }) {
+function Page2Divider({ color }: Readonly<{ color: string }>) {
   return (
     <div className="flex justify-center py-24">
       <PiStarFourFill className="text-6xl" style={{ fill: color }} />

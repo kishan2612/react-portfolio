@@ -1,3 +1,5 @@
+import {Project} from "./Project";
+
 export interface User {
   name: string;
     shortDescription:string;
@@ -7,7 +9,7 @@ export interface User {
     primaryColor:string;
     workExperiences:Array<WorkExperience>
     connectionsMediums:Array<ConnectionMedium>
-    workProjects: Array<WorkProject>
+    workProjects: Array<Project>
     slogan1:string
     slogan2:string
 }
@@ -23,12 +25,4 @@ export interface WorkExperience {
 export interface ConnectionMedium {
   websiteName: string,
   websiteLink: string
-}
-
-export interface WorkProject {
-  projectName: string,
-  mainImageLocation: string,
-  longDescription: string,
-  shortDescription:string,
-  
 }

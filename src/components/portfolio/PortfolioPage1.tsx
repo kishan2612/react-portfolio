@@ -1,4 +1,3 @@
-import React from 'react'
 import { AppColors } from '../../constants/AppColors'
 import TypewriterText from '../widgets/TypeWriterText';
 import { User } from '../../model/user';
