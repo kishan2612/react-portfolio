@@ -1,4 +1,3 @@
-import React from "react";
 const PortfolioWorkPage = () => {
     return (
       <div className="bg-blue-300 h-screen">

@@ -1,6 +1,6 @@
 import {ConnectionMedium, User, WorkExperience} from "../model/User.ts";
 import {Project} from "../model/Project";
-import AssetLocation from "./AssetLocation.ts";
+import AssetLocation, {KishanAssetLocation} from "./AssetLocation.ts";
 
 //kishan work experience
 const workExperiences: WorkExperience[] = [
@@ -40,14 +40,14 @@ const kishanProjects: Project[] = [
     {
         id: "k-1",
         projectName: "Mi-Retail",
-        mainImageLocation: AssetLocation.projectPlaceHolderImage,
+        mainImageLocation: KishanAssetLocation.miRetail2,
         shortDescription: "Mi Retail is a comprehensive retail management app designed to optimize sales, inventory," +
             " and distributor operations for Xiaomi’s retail network in India, Bangladesh & Nepal. It enhances stock tracking," +
             " order management, " +
             "and role-based access while ensuring realtime data synchronization",
         role: "Lead Mobile Application Developer",
         duration: "2022 - Ongoing",
-        screenshots: [],
+        screenshots: [KishanAssetLocation.miRetail1,KishanAssetLocation.miRetail3],
         technologies: ["Flutter", "Dart", "Kotlin", "Firebase", "Google ML kit", "H5", "SSO"],
         features: ["Retailer Mapping & Management", "Stock & Inventory Management", "Order & Prebooking System",
             "Role-Based Access & User Hierarchy", "Sales & Performance Analytics", "Check-In/Check-Out System", "Promoter Gamification"],
@@ -66,13 +66,13 @@ const kishanProjects: Project[] = [
     {
         id: "k-2",
         projectName: "Xiaomi Service+",
-        mainImageLocation: AssetLocation.projectPlaceHolderImage,
+        mainImageLocation: KishanAssetLocation.miService1,
         shortDescription: "Xiaomi Service+ is an all-in-one after-sales service platform designed to enhance customer " +
             "support and service experiences for Xiaomi users. The app provides seamless device repair tracking, service " +
             "center discovery, warranty management, real-time service updates and Xiaomi Priority Club to provide premium experience",
         role: "Lead Mobile Application Developer",
         duration: "2022 - 2024",
-        screenshots: [],
+        screenshots: [KishanAssetLocation.miService2,KishanAssetLocation.miService3],
         technologies: ["Flutter", "Dart", "Kotlin", "Firebase", "Google Maps API", "SSO"],
         features: ["Service Request & Tracking", "Nearby Service Center Locator", "Warranty & Repair Status Management",
             "Online Appointment Booking", "Spare Parts Price Estimation", "Real-Time Notifications & Updates", "Xiaomi Priority Club"],

@@ -13,7 +13,7 @@ const ProjectDetailPage = () => {
         if (project) {
             return (
                 <div className="w-full  min-h-screen bg-black text-white font-sans">
-                     Navigation Bar
+                     Navigation Bar1
                     <header className="fixed top-0 left-0 w-full">
                        <PortfolioNavBar user={userKishan} showActionItems={false}/>
                     </header>
@@ -62,14 +62,13 @@ const ProjectDetailPage = () => {
 
                         {/* Screenshots Gallery */}
                         <div className="mt-16">
-                            <h2 className="text-2xl font-semibold mb-4 text-gray-200">Screenshots</h2>
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                                 {project.screenshots.map((screenshot, index) => (
                                     <img
                                         key={screenshot}
                                         src={screenshot}
                                         alt={`Screenshot ${index + 1}`}
-                                        className="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-105 transition-transform"
+                                        className="w-full h-auto object-cover rounded-3xl shadow-lg hover:scale-105 transition-transform"
                                     />
                                 ))}
                             </div>
