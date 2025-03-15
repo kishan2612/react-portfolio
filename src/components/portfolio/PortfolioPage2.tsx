@@ -10,7 +10,7 @@ import ContactSection from "./Contact.tsx";
 const PortfolioPage2 = ({ user }: { user: User }) => {
   return (
     <div
-      className="bg-black   pb-8 mx-auto"
+      className="bg-black  mx-auto"
       style={{
         borderTopLeftRadius: 32,
         borderTopRightRadius: 32,
@@ -30,10 +30,13 @@ const PortfolioPage2 = ({ user }: { user: User }) => {
 
 const About = ({ about }: { about: string }) => {
   return (
-    <div className="pt-4">
+      <section id="/about">
+
+      <div className="pt-4">
       <ProjectTitle title={"About"} />
       <p className="text-gray-200 px-16 text-lg ">{about}</p>
     </div>
+      </section>
   );
 };
 
@@ -47,11 +50,13 @@ const ExpertiseTable = ({ user }: { user: User }) => {
 
 const FeaturedWorks = ({ user }: { user: User }) => {
   return (
+      <section id="/works">
     <div>
       <Page2Divider color={user.primaryColor} />
       <ProjectTitle title={"Highlights"} />
       <ProjectList/>
     </div>
+      </section>
   );
 };
 function Page2Divider({ color }: Readonly<{ color: string }>) {

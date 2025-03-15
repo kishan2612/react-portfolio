@@ -14,7 +14,8 @@ const ContactSection = ({ user }: { user: User }) => {
         }
     };
     return (
-        <div className=' w-full py-16 px-6 md:px-20 text-black font-sans' style={{
+        <section id="/contact">
+        <div className=' w-full py-16 px-6 md:px-20 text-black font-sans rounded-t-3xl' style={{
             backgroundColor: user.primaryColor
         }}>
             {/* Main Content */}
@@ -61,6 +62,7 @@ const ContactSection = ({ user }: { user: User }) => {
             {/*    </a>*/}
             {/*</div>*/}
         </div>
+        </section>
     );
 };
 

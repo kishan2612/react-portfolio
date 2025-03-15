@@ -3,6 +3,7 @@ import PortfolioNavBar from '../components/PortfolioNavBar.tsx';
 import { User } from '../model/User.ts';
 import PortfolioPage1 from "../components/portfolio/PortfolioPage1.tsx";
 import PortfolioPage2 from "../components/portfolio/PortfolioPage2.tsx";
+import ScrollToTopButton from "../components/ScrollToTopButton.tsx";
 
 const PortfolioRootPage = () => {
     const user:User = userKishan
@@ -21,7 +22,10 @@ const PortfolioRootPage = () => {
             <div className="h-screen">
                 <PortfolioPage2 user={userKishan} />
             </div>
+            {/* Floating Scroll to Top Button */}
+            <ScrollToTopButton />
         </div>
+
     );
 };
 

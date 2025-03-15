@@ -1,7 +1,4 @@
 import {Route, Routes} from 'react-router-dom';
-import PortfolioAboutPage from "./pages/PortfolioAboutPage.tsx";
-import PortfolioWorkPage from "./components/portfolio/PortfolioWorkPage.tsx";
-import PortfolioContactPage from "./pages/PortfolioContactPage.tsx";
 import PortfolioRootPage from "./pages/PortfolioRootPage";
 import ProjectDetailPage from "./pages/ProjectDetail.tsx";
 const App = () => {
@@ -15,9 +12,6 @@ const App = () => {
         <Routes>
           {/* Define routes */}
           <Route path="/" element={<PortfolioRootPage />} /> {/* Default route */}
-          <Route path="/about" element={<PortfolioAboutPage />} />
-          <Route path="/work" element={<PortfolioWorkPage />} />
-          <Route path="/contact" element={<PortfolioContactPage />} />
           <Route path="/home" element={<PortfolioRootPage/>}/>
           <Route path="/works/:projectId" element={<ProjectDetailPage />} />
         </Routes>
