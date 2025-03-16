@@ -1,5 +1,5 @@
 import { userKishan } from '../constants/KishanUserInformation.ts'
-import PortfolioNavBar from '../components/PortfolioNavBar.tsx';
+import PortfolioNavBar from '../components/portfolio/PortfolioNavBar.tsx';
 import { User } from '../model/User.ts';
 import PortfolioPage1 from "../components/portfolio/PortfolioPage1.tsx";
 import PortfolioPage2 from "../components/portfolio/PortfolioPage2.tsx";

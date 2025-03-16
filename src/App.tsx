@@ -1,6 +1,7 @@
 import {Route, Routes} from 'react-router-dom';
 import PortfolioRootPage from "./pages/PortfolioRootPage";
 import ProjectDetailPage from "./pages/ProjectDetail.tsx";
+import DigitalAgencyHome from "./components/agency/DigitalAgencyHome.tsx";
 const App = () => {
   return (
     <div className='relative'>
@@ -11,7 +12,7 @@ const App = () => {
       <div > {/* Add padding to avoid overlap with the fixed navbar */}
         <Routes>
           {/* Define routes */}
-          <Route path="/" element={<PortfolioRootPage />} /> {/* Default route */}
+          <Route path="/" element={<DigitalAgencyHome />} /> {/* Default route */}
           <Route path="/home" element={<PortfolioRootPage/>}/>
           <Route path="/works/:projectId" element={<ProjectDetailPage />} />
         </Routes>

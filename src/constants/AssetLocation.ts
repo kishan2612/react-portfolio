@@ -8,6 +8,8 @@ import miService1 from "../assets/service+/xs-1.png";
 import miService2 from "../assets/service+/xs-2.png";
 import miService3 from "../assets/service+/xs-3.png";
 
+import agencyDashboardAbstract from "../assets/agency/dashboard-abstract.webm";
+
 
 export default class AssetLocation {
     static readonly kishanProfileImage: string = kishanProfileImage;
@@ -22,6 +24,8 @@ export class KishanAssetLocation {
     static readonly miService1: string = miService1;
     static readonly miService2: string = miService2;
     static readonly miService3: string = miService3;
+}
 
-
+export  class VideoAssets{
+    static readonly agencyAbstract :string = agencyDashboardAbstract;
 }
