@@ -95,13 +95,13 @@ const kishanProjects: Project[] = [
     {
         id: "k-3",
         projectName: "ServOps",
-        mainImageLocation: AssetLocation.projectPlaceHolderImage,
+        mainImageLocation: KishanAssetLocation.servops1,
         shortDescription: "ServOps is Xiaomi's field service management application designed to streamline service operations, " +
             "enhance technician efficiency, and improve service request handling. The app enables real-time job tracking and " +
             "automated workflows.",
         role: "Lead Mobile Application Developer",
         duration: "2024 - Ongoing",
-        screenshots: [],
+        screenshots: [KishanAssetLocation.servops2, KishanAssetLocation.servops3],
         technologies: ["Flutter", "Dart", "Firebase", "Google Maps API", "SSO"],
         features: ["Service Request Management", "Technician Assignment & Tracking", "Real-Time Status Updates",
              "Automated Reporting & Analytics"],
@@ -118,13 +118,13 @@ const kishanProjects: Project[] = [
     {
         id: "k-4",
         projectName: "Xiaomi Employee Sales",
-        mainImageLocation: AssetLocation.projectPlaceHolderImage,
+        mainImageLocation: KishanAssetLocation.es1,
         shortDescription: "Xiaomi Employee Sales Portal is a web-based platform designed to facilitate exclusive sales, " +
             "discounts, and product purchases for Xiaomi employees. The portal provides a seamless shopping experience " +
             "with order tracking and role-based access.",
         role: "Frontend Developer",
         duration: "2025",
-        screenshots: [],
+        screenshots: [KishanAssetLocation.es2,KishanAssetLocation.es3],
         technologies: ["React", "TypeScript", "Hooks", "CAS", "MongoDB", "Firebase"],
         features: ["Exclusive Employee Discounts", "Product Catalog & Ordering", "Order Tracking & Management",
             "Role-Based Access & Admin Controls"],

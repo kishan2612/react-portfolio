@@ -8,6 +8,16 @@ import miService1 from "../assets/service+/xs-1.png";
 import miService2 from "../assets/service+/xs-2.png";
 import miService3 from "../assets/service+/xs-3.png";
 
+import servops1 from "../assets/servops/servops-1.png";
+import servops2 from "../assets/servops/servops-2.png";
+import servops3 from "../assets/servops/servops-3.png";
+
+import es1 from "../assets/es/es-1.png";
+import es2 from "../assets/es/es-2.png";
+import es3 from "../assets/es/es-3.png";
+
+
+
 import agencyDashboardAbstract from "../assets/agency/dashboard-abstract.webm";
 
 
@@ -24,6 +34,14 @@ export class KishanAssetLocation {
     static readonly miService1: string = miService1;
     static readonly miService2: string = miService2;
     static readonly miService3: string = miService3;
+
+    static readonly servops1: string = servops1;
+    static readonly servops2: string = servops2;
+    static readonly servops3: string = servops3;
+
+    static readonly es1: string = es1;
+    static readonly es2: string = es2;
+    static readonly es3: string = es3;
 }
 
 export  class VideoAssets{
