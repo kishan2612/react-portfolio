@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body{
-    @apply bg-purple-300
+    @apply bg-black
 }

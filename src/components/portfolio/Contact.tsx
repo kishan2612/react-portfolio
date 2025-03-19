@@ -15,32 +15,32 @@ const ContactSection = ({ user }: { user: User }) => {
     };
     return (
         <section id="/contact">
-        <div className=' w-full py-16 px-6 md:px-20 text-black font-sans rounded-t-3xl' style={{
+        <div className=' w-full py-8 md:py-16 px-8 md:px-16 text-black font-sans rounded-t-3xl' style={{
             backgroundColor: user.primaryColor
         }}>
             {/* Main Content */}
             <div className="flex justify-between items-start">
                 {/* Heading */}
-                <h1 className="text-6xl md:text-9xl font-black leading-none font-alfaSlab">
+                <h1 className="text-5xl md:text-9xl font-black leading-none font-alfaSlab">
                     GET IN TOUCH
                 </h1>
 
             </div>
 
-            <table className="min-w-min my-12 ">
+            <table className="min-w-min my-6 md:my-12 ">
                 <tbody>
                 <tr>
                     {userKishan.connectionsMediums.map((method, index) => (
                         <td
                             key={index}
-                            className="w-48 py-4 text-black text-xl font-spaceGrotesk cursor-pointer hover:underline "
+                            className="w-32 md:w-48 py-4 text-black text-base md:text-xl font-spaceGrotesk cursor-pointer hover:underline "
                             onClick={() => handleClick(method.websiteLink)}
                         >
                             <div className="flex items-center justify-center space-x-2">
                                 {method.websiteName === "LinkedIn" ? (
-                                    <FaLinkedin className="text-2xl" />
+                                    <FaLinkedin className="text-lg md:text-2xl" />
                                 ) : (
-                                    <FaEnvelope className="text-2xl" />
+                                    <FaEnvelope className="text-lg md:text-2xl" />
                                 )}
                                 <span>{method.websiteName}</span>
                             </div>

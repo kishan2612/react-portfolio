@@ -1,7 +1,7 @@
 import { userKishan } from '../constants/KishanUserInformation.ts'
 import PortfolioNavBar from '../components/portfolio/PortfolioNavBar.tsx';
 import { User } from '../model/User.ts';
-import PortfolioPage1 from "../components/portfolio/PortfolioPage1.tsx";
+import PortfolioIntro from "../components/portfolio/PortfolioIntro.tsx";
 import PortfolioPage2 from "../components/portfolio/PortfolioPage2.tsx";
 import ScrollToTopButton from "../components/ScrollToTopButton.tsx";
 
@@ -15,7 +15,7 @@ const PortfolioRootPage = () => {
                 <PortfolioNavBar user={userKishan} />
             </div>
             <div className="">
-                <PortfolioPage1 user={userKishan} />
+                <PortfolioIntro user={userKishan} />
             </div>
 
             {/* Page 2 */}

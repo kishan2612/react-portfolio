@@ -11,6 +11,7 @@ const ExperienceList = ({ user }: { user: User }) => {
     </div>
   );
 };
+
 function CareerTimeline({ user }: Readonly<{ user: User }>) {
     return (
       <div className="max-w-4xl mx-auto">

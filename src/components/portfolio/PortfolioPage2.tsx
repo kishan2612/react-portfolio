@@ -21,6 +21,7 @@ const PortfolioPage2 = ({ user }: { user: User }) => {
 
       <ExperienceList user={user} />
       <Page2Divider color={user.primaryColor} />
+
       <ExpertiseTable user={user} />
       <FeaturedWorks user={user} />
       <ContactSection user={user} />
@@ -32,9 +33,9 @@ const About = ({ about }: { about: string }) => {
   return (
       <section id="/about">
 
-      <div className="pt-4">
+      <div className="py-8 md:py-16">
       <ProjectTitle title={"About"} />
-      <p className="text-gray-200 px-16 text-lg ">{about}</p>
+      <p className="text-gray-300 px-8 md:px-16 pt-4 md:pt-8 text-base md:text-lg">{about}</p>
     </div>
       </section>
   );
@@ -53,16 +54,18 @@ const FeaturedWorks = ({ user }: { user: User }) => {
       <section id="/works">
     <div>
       <Page2Divider color={user.primaryColor} />
+        <div className="py-8 md:py-16">
       <ProjectTitle title={"Highlights"} />
       <ProjectList/>
+        </div>
     </div>
       </section>
   );
 };
 function Page2Divider({ color }: Readonly<{ color: string }>) {
   return (
-    <div className="flex justify-center py-24">
-      <PiStarFourFill className="text-6xl" style={{ fill: color }} />
+    <div className="flex justify-center py-16 md:py-24">
+      <PiStarFourFill className=" text-4xl md:text-6xl" style={{ fill: color }} />
     </div>
   );
 }

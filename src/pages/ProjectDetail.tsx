@@ -24,19 +24,17 @@ const ProjectDetailPage = () => {
                     {/* Main Content */}
                     <div className=" mx-auto  px-16 md:px-16 pb-24 pt-28">
                         {/* Project Name */}
-                        <h1 className="md:text-6xl font-bold mb-12 mt-16 text-start font-alfaSlab" style={
-                            {fontSize: "7rem"}
-                        }>{project.projectName}</h1>
+                        <h1 className="md:text-6xl font-bold mb-6 md:mb-12 mt-8 md:mt-16 text-start font-alfaSlab text-6xl md:text-9xl">{project.projectName}</h1>
 
                         {/* Short Description */}
-                        <p className="text-xl text-gray-300 text-start mb-16">{project.shortDescription}</p>
+                        <p className="text-base md:text-xl text-gray-300 text-start mb-16">{project.shortDescription}</p>
 
                         {/* Grid Layout for Details */}
                         <div className="grid md:grid-cols-2 gap-12">
                             {/* Left Column: Project Details */}
                             <div>
-                                <h2 className="text-2xl font-semibold mb-12 text-gray-200">Project Details</h2>
-                                <ul className="space-y-6 text-lg text-gray-400">
+                                <h2 className=" text-xl md:text-2xl font-semibold mb-6 md:mb-12 text-gray-200">Project Details</h2>
+                                <ul className="space-y-2 md:space-y-6 text-base md:text-lg text-gray-400">
                                     <li><strong>Role:</strong> {project.role}</li>
                                     <li><strong>Timeline:</strong> {project.duration}</li>
                                     <li><strong>Technologies:</strong> {project.technologies.join(", ")}</li>
@@ -45,11 +43,11 @@ const ProjectDetailPage = () => {
 
                             {/* Right Column: Features */}
                             <div>
-                                <h2 className="text-2xl font-semibold mb-12 text-gray-200">Features</h2>
-                                <ul className="space-y-6 text-lg text-gray-400">
+                                <h2 className="text-xl md:text-2xl font-semibold mb-6 md:mb-12 text-gray-200">Features</h2>
+                                <ul className="space-y-2 md:space-y-6 text-base md:text-lg text-gray-400">
                                     {project.features.map((feature, _) => (
                                         <li key={feature} className="flex items-center">
-                                            <span className="ml-2">{feature}</span>
+                                            <span>{feature}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -58,8 +56,8 @@ const ProjectDetailPage = () => {
 
                         {/* Long Description */}
                         <div className="mt-16">
-                            <h2 className="text-2xl font-semibold mb-4 text-gray-200">About This Project</h2>
-                            <p className="text-lg text-gray-300 leading-relaxed">{project.longDescription}</p>
+                            <h2 className="text-xl md:text-2xl font-semibold mb-6 md:mb-12 text-gray-200">About This Project</h2>
+                            <p className="text-base md:text-lg text-gray-300 leading-relaxed">{project.longDescription}</p>
                         </div>
 
 

@@ -16,6 +16,9 @@ export default {
         '11xl': '14rem',   // Custom size 11xl
         '12xl': '16rem',   // Custom size 12xl
       },
+      borderWidth: {
+        '12':'1rem'
+      },
       animation: {
         marquee: 'marquee 30s linear infinite',
       },
