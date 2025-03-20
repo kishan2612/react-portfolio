@@ -14,7 +14,7 @@ const ExperienceList = ({ user }: { user: User }) => {
 
 function CareerTimeline({ user }: Readonly<{ user: User }>) {
     return (
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto mt-8 md:mt-10">
         <div className="relative flex flex-col items-center">
           <div
             className="absolute w-1 bg-gray-300 h-full"
@@ -27,7 +27,7 @@ function CareerTimeline({ user }: Readonly<{ user: User }>) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className={`relative w-full md:w-1/2 p-8 shadow-lg rounded-lg ${index % 2 === 0 ? "md:ml-auto text-left" : "md:mr-auto text-right"}`}
+              className={`relative w-2/4 md:w-1/2 p-6 md:p-8 shadow-lg rounded-lg ${index % 2 === 0 ? "ml-auto text-left" : "mr-auto text-right"}`}
             >
               <div
                 className="absolute top-8 w-8 h-8 flex items-center justify-center text-white rounded-full shadow-md"
@@ -39,9 +39,9 @@ function CareerTimeline({ user }: Readonly<{ user: User }>) {
               >
                 <FaBriefcase size={14} />
               </div>
-              <h3 className="text-xl text-white font-semibold font-spaceGrotesk">{experience.position}</h3>
-              <p className="text-gray-400">{experience.company}</p>
-              <p className="text-sm text-gray-600">
+              <h3 className="text-sm md:text-xl text-white font-semibold font-spaceGrotesk">{experience.position}</h3>
+              <p className="text-gray-400 text-xs md:text-base">{experience.company}</p>
+              <p className="text-xs md:text-sm text-gray-600">
                 {experience.startYear} - {experience.endYear}
               </p>
             </motion.div>

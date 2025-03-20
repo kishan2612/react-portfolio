@@ -6,9 +6,12 @@ import {User} from "../../model/User.ts";
 import SkillListMarquee from "./SkillMarquee";
 import ExperienceList from "./ExperienceList";
 import ContactSection from "./Contact.tsx";
+import {useUser} from "../../hooks/UserContext.tsx";
 
-const PortfolioPage2 = ({ user }: { user: User }) => {
-  return (
+const PortfolioPage2 = () => {
+    const user:User = useUser();
+
+    return (
     <div
       className="bg-black  mx-auto"
       style={{

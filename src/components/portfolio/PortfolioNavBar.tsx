@@ -1,7 +1,7 @@
 import {User} from '../../model/User.ts'
 import {Link} from "react-router-dom";
 import {Link as ScrollLink} from "react-scroll";
-import {useState} from "react";
+import { useState} from "react";
 import {Squash} from 'hamburger-react'
 
 
@@ -11,11 +11,11 @@ const PortfolioNavBar = ({user, showActionItems = true}: { user: User; showActio
 
     return (
         <nav
-            className="h-24 flex items-center justify-between px-6 md:px-16 font-sans"
+            className="h-20 md:h-24 flex items-center justify-between px-6 md:px-16 font-sans"
             style={{backgroundColor: user.primaryColor}}
         >
             {/* Logo / Name */}
-            <Link to="/" className="text-black text-2xl hover:scale-90 transition-transform cursor-pointer">
+            <Link to="/" className="text-black text-lg md:text-2xl hover:scale-90 transition-transform cursor-pointer">
                 {user.name}
             </Link>
 
@@ -47,7 +47,7 @@ const PortfolioNavBar = ({user, showActionItems = true}: { user: User; showActio
 
             <div className="md:hidden z-50">
 
-            <Squash toggled={menuOpen} toggle={
+            <Squash size={18} toggled={menuOpen} toggle={
                 toggled => {
                     if (toggled) {
                         // open a menu

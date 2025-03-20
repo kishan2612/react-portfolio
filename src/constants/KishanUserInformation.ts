@@ -163,11 +163,11 @@ const kishanProjects: Project[] = [
     {
         id: "k-6",
         projectName: "idfye",
-        mainImageLocation: AssetLocation.projectPlaceHolderImage,
+        mainImageLocation: KishanAssetLocation.idf1,
         shortDescription: "idfye is a platform that connects employees and employers, facilitating collaboration, work reporting, and productivity analysis. It includes features like daily attendance tracking and more.",
         role: "Mobile Application Developer",
         duration: "2021",
-        screenshots: [],
+        screenshots: [KishanAssetLocation.idf2,KishanAssetLocation.idf3],
         technologies: ["Flutter", "Dart"],
         features: ["Employee-Employer Collaboration", "Work Reporting", "Productivity Analysis", "Daily Attendance Tracking"],
         longDescription: "idfye is a comprehensive platform designed to bridge the gap between employees and employers, " +

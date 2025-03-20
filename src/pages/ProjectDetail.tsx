@@ -1,24 +1,26 @@
 import {useParams} from "react-router-dom";
-import {getUserSelectedProject} from "../components/portfolio/project/UserProject.ts";
+import {getSelectedUser, getUserSelectedProject} from "../components/portfolio/project/UserProject.ts";
 import {Project} from "../model/Project.ts";
 import PortfolioNavBar from "../components/portfolio/PortfolioNavBar.tsx";
-import {userKishan} from "../constants/KishanUserInformation.ts";
 import {useState} from "react";
 import {motion} from "framer-motion";
+import {User} from "../model/User.ts";
 
 const ProjectDetailPage = () => {
     const {projectId} = useParams(); // Extract project ID from URL
     const [selectedImage, setSelectedImage] = useState<string | null>();
 
-    if (projectId) {
-        const project: Project | undefined | null = getUserSelectedProject(projectId)
+    const user: User | undefined | null = getSelectedUser(projectId!);
+
+    if (projectId && user) {
+        const project: Project | undefined | null = getUserSelectedProject(projectId,user!)
 
         if (project) {
             return (
                 <div className="w-full  min-h-screen bg-black text-white font-sans">
                     Navigation Bar1
                     <header className="fixed top-0 left-0 w-full">
-                        <PortfolioNavBar user={userKishan} showActionItems={false}/>
+                        <PortfolioNavBar user={user} showActionItems={false}/>
                     </header>
 
                     {/* Main Content */}

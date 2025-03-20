@@ -16,6 +16,10 @@ import es1 from "../assets/es/es-1.png";
 import es2 from "../assets/es/es-2.png";
 import es3 from "../assets/es/es-3.png";
 
+import idf1 from "../assets/idfye/idf-1.png";
+import idf2 from "../assets/idfye/idf-2.png";
+import idf3 from "../assets/idfye/idf-3.png";
+
 
 
 import agencyDashboardAbstract from "../assets/agency/dashboard-abstract.webm";
@@ -42,6 +46,10 @@ export class KishanAssetLocation {
     static readonly es1: string = es1;
     static readonly es2: string = es2;
     static readonly es3: string = es3;
+
+    static readonly idf1: string = idf1;
+    static readonly idf2: string = idf2;
+    static readonly idf3: string = idf3;
 }
 
 export  class VideoAssets{

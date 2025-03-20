@@ -1,9 +1,13 @@
 import TypewriterText from '../widgets/TypeWriterText';
 import {User} from '../../model/User.ts';
+import {useUser} from "../../hooks/UserContext.tsx";
 
-const PortfolioIntro = ({user}: { user: User }) => {
+const PortfolioIntro = () => {
+    const user:User = useUser();
+
     return (
-        <div className='relative mt-24'
+
+        <div className='relative mt-20 md:mt-24'
              style={{background: user.primaryColor, height: 'calc(100vh - 2rem)'}}>
 
             <div className='justify-center'>

@@ -1,8 +1,10 @@
 import {User} from "../../model/User.ts";
-import {userKishan} from "../../constants/KishanUserInformation.ts";
 import {FaEnvelope, FaLinkedin} from "react-icons/fa";
+import {useUser} from "../../hooks/UserContext.tsx";
 
-const ContactSection = ({ user }: { user: User }) => {
+const ContactSection = () => {
+
+    const user:User = useUser();
 
     const handleClick = (link: string) => {
         if (link.startsWith("mailto:")) {
@@ -30,7 +32,7 @@ const ContactSection = ({ user }: { user: User }) => {
             <table className="min-w-min my-6 md:my-12 ">
                 <tbody>
                 <tr>
-                    {userKishan.connectionsMediums.map((method, index) => (
+                    {user.connectionsMediums.map((method, index) => (
                         <td
                             key={index}
                             className="w-32 md:w-48 py-4 text-black text-base md:text-xl font-spaceGrotesk cursor-pointer hover:underline "
