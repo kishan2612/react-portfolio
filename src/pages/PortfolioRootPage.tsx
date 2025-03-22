@@ -29,7 +29,6 @@ const PortfolioRootPage = () => {
                     <PortfolioNavBar user={user} />
                 </div>
 
-                {/* Scrollable Content */}
                 <div ref={containerRef} className="relative h-[200vh] overflow-y-auto">
                     {/* Page 1 (Intro) - Fixed */}
                     <motion.div 

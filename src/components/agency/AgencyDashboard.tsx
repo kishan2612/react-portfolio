@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import {VideoAssets} from "../../constants/AssetLocation.ts";
+import { AgencyConstants } from "../../constants/AgencyConstants.ts";
 
 const letterVariants = {
     hidden: { opacity: 0, y: 100 },
@@ -14,10 +15,10 @@ const letterVariants = {
     }),
 };
 
-const sentence = "We Design. We Develop.";
 
 const AgencyDashboard = () => {
     return (
+        <div className="w-full">
         <motion.section
             initial="hidden"
             animate="visible"
@@ -39,8 +40,8 @@ const AgencyDashboard = () => {
 
             {/* Animated Text Content */}
             <div className="relative z-10 text-white px-4">
-                <h2 className="text-9xl font-alfaSlab leading-tight">
-                    {sentence.split("").map((char, index) => (
+                <h2 className="text-3xl md:text-8xl font-alfaSlab leading-tight">
+                    {AgencyConstants.agencySlogan.split("").map((char, index) => (
                         <motion.span
                             key={index}
                             custom={index}
@@ -56,12 +57,13 @@ const AgencyDashboard = () => {
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
-                    className="mt-4 text-xl opacity-90 font-sans"
+                    className="mt-4 text-lg md:text-xl opacity-90 font-sans"
                 >
                     Crafting exceptional digital experiences for brands that matter.
                 </motion.p>
             </div>
         </motion.section>
+        </div>
     );
 };
 

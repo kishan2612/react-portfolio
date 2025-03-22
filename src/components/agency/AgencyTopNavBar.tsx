@@ -1,6 +1,8 @@
+import { AgencyConstants } from "../../constants/AgencyConstants"
+
 const AgencyTopNavBar = ()=>{
     return  <header className="h-24 flex justify-between items-center px-16 fixed top-0 w-full z-10 bg-black">
-        <h1 className="text-2xl font-bold">Your Agency</h1>
+        <h1 className="text-2xl font-bold">{AgencyConstants.agencyName}</h1>
         <nav>
             <ul className="flex space-x-6 text-lg">
                 <li><a href="#portfolio" className="hover:text-gray-400">Portfolio</a></li>

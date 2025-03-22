@@ -12,7 +12,7 @@ const App = () => {
       <div > {/* Add padding to avoid overlap with the fixed navbar */}
         <Routes>
           {/* Define routes */}
-          <Route path="/" element={<PortfolioRootPage />} /> {/* Default route */}
+          <Route path="/" element={<DigitalAgencyHome />} /> {/* Default route */}
           <Route path="/home" element={<PortfolioRootPage/>}/>
           <Route path="/works/:projectId" element={<ProjectDetailPage />} />
         </Routes>

@@ -1,0 +1,5 @@
+export class AgencyConstants{
+    public static readonly agencyName = `E.X.O. Digital`;
+    public static readonly agencySlogan = `We Design. We Develop.`;
+    public static readonly agencyDescription = `We are a team of passionate developers who live and breathe code. For us, coding isn’t just a profession—it’s an obsession, a creative outlet, and a way to build something meaningful. We thrive on solving complex problems, pushing boundaries, and transforming ideas into immersive digital experiences. With a deep love for technology, design, and innovation, we craft seamless, high-performance solutions that don’t just function—they inspire. Whether it's designing intuitive user interfaces, building scalable applications, or perfecting the tiniest details, we pour our heart into every line of code. This isn't just our work—it's our craft, our passion, and our way of shaping the future.`;
+}

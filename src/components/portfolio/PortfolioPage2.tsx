@@ -1,5 +1,4 @@
 
-import {PiStarFourFill} from "react-icons/pi";
 import ProjectTitle from "./ProjectTitle";
 import ProjectList from "./project/ProjectList";
 import {User} from "../../model/User.ts";
