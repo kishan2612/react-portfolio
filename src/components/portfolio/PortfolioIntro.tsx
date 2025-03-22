@@ -7,7 +7,7 @@ const PortfolioIntro = () => {
 
     return (
 
-        <div className='relative mt-20 md:mt-24'
+        <div
              style={{background: user.primaryColor, height: 'calc(100vh - 2rem)'}}>
 
             <div className='justify-center'>

@@ -7,6 +7,7 @@ import SkillListMarquee from "./SkillMarquee";
 import ExperienceList from "./ExperienceList";
 import ContactSection from "./Contact.tsx";
 import {useUser} from "../../hooks/UserContext.tsx";
+import Page2Divider from "../PageDivider.tsx";
 
 const PortfolioPage2 = () => {
     const user:User = useUser();
@@ -27,7 +28,7 @@ const PortfolioPage2 = () => {
 
       <ExpertiseTable user={user} />
       <FeaturedWorks user={user} />
-      <ContactSection user={user} />
+      <ContactSection />
     </div>
   );
 };
@@ -65,11 +66,5 @@ const FeaturedWorks = ({ user }: { user: User }) => {
       </section>
   );
 };
-function Page2Divider({ color }: Readonly<{ color: string }>) {
-  return (
-    <div className="flex justify-center py-16 md:py-24">
-      <PiStarFourFill className=" text-4xl md:text-6xl" style={{ fill: color }} />
-    </div>
-  );
-}
+
 export default PortfolioPage2;

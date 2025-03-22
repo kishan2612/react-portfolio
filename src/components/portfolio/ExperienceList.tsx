@@ -5,7 +5,7 @@ import {FaBriefcase} from "react-icons/fa";
 
 const ExperienceList = ({ user }: { user: User }) => {
   return (
-    <div>
+    <div className="py-8 md:py-16" >
       <ProjectTitle title={"Career"} />
       <CareerTimeline user={user} />
     </div>
@@ -14,7 +14,7 @@ const ExperienceList = ({ user }: { user: User }) => {
 
 function CareerTimeline({ user }: Readonly<{ user: User }>) {
     return (
-      <div className="max-w-4xl mx-auto mt-8 md:mt-10">
+      <div className="max-w-4xl mx-auto pt-4 md:pt-8">
         <div className="relative flex flex-col items-center">
           <div
             className="absolute w-1 bg-gray-300 h-full"

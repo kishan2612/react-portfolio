@@ -51,18 +51,6 @@ const ContactSection = () => {
                 </tr>
                 </tbody>
             </table>
-            {/*/!* Social Links *!/*/}
-            {/*<div className="flex space-x-6 text-lg mt-10">*/}
-            {/*    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:underline">*/}
-            {/*        Twitter*/}
-            {/*    </a>*/}
-            {/*    <a href="https://behance.net" target="_blank" rel="noopener noreferrer" className="hover:underline">*/}
-            {/*        Behance*/}
-            {/*    </a>*/}
-            {/*    <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" className="hover:underline">*/}
-            {/*        Dribbble*/}
-            {/*    </a>*/}
-            {/*</div>*/}
         </div>
         </section>
     );
