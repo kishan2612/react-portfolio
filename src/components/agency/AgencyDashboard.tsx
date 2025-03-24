@@ -2,19 +2,14 @@ import { motion } from "framer-motion";
 import {VideoAssets} from "../../constants/AssetLocation.ts";
 import { AgencyConstants } from "../../constants/AgencyConstants.ts";
 
-const letterVariants = {
-    hidden: { opacity: 0, y: 100 },
+const wordVariants = {
+    hidden: { opacity: 0, y: 20 }, // Start from below
     visible: (i: number) => ({
         opacity: 1,
         y: 0,
-        transition: {
-            delay: i * 0.05,
-            duration: 0.5,
-            ease: "easeOut",
-        },
+        transition: { delay: i * 0.05, duration: 0.5, ease: "linear" },
     }),
 };
-
 
 const AgencyDashboard = () => {
     return (
@@ -35,8 +30,6 @@ const AgencyDashboard = () => {
                 Your browser does not support the video tag.
             </video>
 
-            {/* Dark Overlay for Readability */}
-            <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
 
             {/* Animated Text Content */}
             <div className="relative z-10 text-white px-4">
@@ -45,7 +38,7 @@ const AgencyDashboard = () => {
                         <motion.span
                             key={index}
                             custom={index}
-                            variants={letterVariants}
+                            variants={wordVariants}
                             className="inline-block"
                         >
                             {char === " " ? "\u00A0" : char}
@@ -56,7 +49,7 @@ const AgencyDashboard = () => {
                 <motion.p
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
+                    transition={{ duration: 0.5, delay: 1.2, ease: "easeOut" }}
                     className="mt-4 text-lg md:text-xl opacity-90 font-sans"
                 >
                     Crafting exceptional digital experiences for brands that matter.

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const AgencyContact = () => {
     return (
-        <section id="agencyContact" className="relative py-16">
+        <section id="contact" className="relative py-16">
             {/* Background Gradient */}
             <div
                 className="absolute inset-0 w-full h-full"

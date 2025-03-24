@@ -3,6 +3,7 @@ import AgencyTopNavBar from "./AgencyTopNavBar.tsx";
 import AgencyDashboard from "./AgencyDashboard.tsx";
 import { useRef } from "react";
 import AgencyPage2 from "./AgencyPage2.tsx";
+import ScrollToTopButton from "../ScrollToTopButton.tsx";
 
 const DigitalAgencyHome = () => {
     const containerRef = useRef(null);
@@ -38,6 +39,8 @@ const DigitalAgencyHome = () => {
             >
                 <AgencyPage2 />
             </motion.div>
+            {/* Floating Scroll to Top Button */}
+            <ScrollToTopButton />
         </div>
 
 

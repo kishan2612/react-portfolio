@@ -4,7 +4,7 @@ import TechAnimatedText from "../widgets/GlitchText.tsx";
 
 const AgencyAbout = () => {
     return (
-        <section id="services" className=" text-white  space-y-10 md:space-y-20">
+        <section id="about" className=" text-white  space-y-10 md:space-y-20">
             {/* Section Title */}
             <div className="w-full text-center">
                 <ProjectTitle title={"Who are we?"} />
