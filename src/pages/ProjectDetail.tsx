@@ -13,7 +13,7 @@ const ProjectDetailPage = () => {
     const user: User | undefined | null = getSelectedUser(projectId!);
 
     if (projectId && user) {
-        const project: Project | undefined | null = getUserSelectedProject(projectId,user!)
+        const project: Project | undefined | null = getUserSelectedProject(projectId,user)
 
         if (project) {
             return (
@@ -26,7 +26,7 @@ const ProjectDetailPage = () => {
                     {/* Main Content */}
                     <div className=" mx-auto  px-16 md:px-16 pb-24 pt-28">
                         {/* Project Name */}
-                        <h1 className="md:text-6xl font-bold mb-6 md:mb-12 mt-8 md:mt-16 text-start font-alfaSlab text-6xl md:text-9xl">{project.projectName}</h1>
+                        <h1 className="md:text-6xl font-bold mb-6 md:mb-12 mt-8 md:mt-16 text-start font-alfaSlab text-6xl">{project.projectName}</h1>
 
                         {/* Short Description */}
                         <p className="text-base md:text-xl text-gray-300 text-start mb-16">{project.shortDescription}</p>

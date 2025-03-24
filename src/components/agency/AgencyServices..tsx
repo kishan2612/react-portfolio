@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
 import ProjectTitle from "../portfolio/ProjectTitle.tsx";
-import { AppColors, Colors } from "../../constants/AppColors.ts";
-import { FaMobileAlt } from "react-icons/fa";
+import { Colors } from "../../constants/AppColors.ts";
+import {FaLayerGroup, FaLightbulb, FaMobileAlt, FaPenNib} from "react-icons/fa";
 import { FaLaptopCode, FaPalette } from "react-icons/fa6";
-import { Page2Divider } from "../widgets/SectionDivider.tsx";
 
 const services = [
     {
@@ -27,14 +26,31 @@ const services = [
         description: "Creating fast, responsive, and scalable websites for businesses & startups.",
         gradient: "linear-gradient(135deg, #93E9BE, #5AC888, #36A678)"
     },
-];
+    {
+        title: "Design Systems",
+        icon: <FaLayerGroup />,
+        color: Colors.blue,
+        description: "Creating cohesive design systems for consistency and scalability across projects.",
+        gradient: "linear-gradient(135deg, #90E0F8, #60B0D8, #3C90B1)"
+    },
+    {
+        title: "Branding",
+        icon: <FaPenNib />,
+        color: Colors.green,
+        description: "Crafting strong brand identities with logo design, typography, and color systems.",
+        gradient: "linear-gradient(135deg, #A0F3A1, #60C878, #329856)"},
+    {
+        title: "Technology Consulting",
+        icon: <FaLightbulb />,
+        color: Colors.orange,
+        description: "Providing expert guidance to help businesses leverage the right technology for growth and efficiency.",
+        gradient: "linear-gradient(135deg, #FFAA80, #FF7A50, #E05A30)"
+    }
+    ];
 
 const AgencyServices = () => {
     return (
-        <section id="services" className="py-24 text-white bg-black" style={{
-            borderTopLeftRadius: 32,
-            borderTopRightRadius: 32,
-        }}>
+        <section id="services" className=" text-white  space-y-10 md:space-y-20">
             {/* Section Title */}
             <div className="w-full text-center">
                 <ProjectTitle title={"What We Offer"} />
@@ -43,7 +59,7 @@ const AgencyServices = () => {
             {/* Service Cards Grid */}
 
 
-            <div className="mx-8 md:mx-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 my-24">
+            <div className="mx-8 md:mx-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
                 {services.map((service, index) => (
                     <motion.div
                         key={index}
@@ -55,12 +71,6 @@ const AgencyServices = () => {
                         style={{ background: service.gradient }}
                     >
 
-                        <motion.div
-                            className="absolute inset-0 rounded-3xl"
-                            style={{ background: "rgba(255,255,255,0.1)", filter: "blur(15px)" }}
-                            initial={{ opacity: 0 }}
-                            whileHover={{ opacity: 1 }}
-                        />
 
                         {/* Icon in Circular Container */}
                         <div className="w-12 md:w-16 h-12 md:h-16 flex items-center justify-center rounded-full bg-white/20 mb-6">
@@ -81,7 +91,6 @@ const AgencyServices = () => {
                     </motion.div>
                 ))}
             </div>
-            <Page2Divider color={AppColors.primaryBackground}/>
         </section>
     );
 };
