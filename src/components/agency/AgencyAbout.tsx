@@ -1,6 +1,5 @@
 import { AgencyConstants } from "../../constants/AgencyConstants";
 import ProjectTitle from "../portfolio/ProjectTitle";
-import TechAnimatedText from "../widgets/GlitchText.tsx";
 
 const AgencyAbout = () => {
     return (
@@ -11,10 +10,10 @@ const AgencyAbout = () => {
             </div>
             {/* Slogan */}
             <div className="text-center">
-                <TechAnimatedText text={"Code. Create. Innovate"}/>
-                {/*<h2 className="text-xl md:text-4xl font-spaceGrotesk tracking-wide">*/}
-                {/*    Code. Create. Innovate.*/}
-                {/*</h2>*/}
+                {/* <TechAnimatedText text={"Code. Create. Innovate"}/> */}
+                <h2 className="text-xl md:text-4xl font-spaceGrotesk tracking-wide">
+                   Code. Create. Innovate.
+                </h2>
                 <p className="mt-1 md:mt-2 text-lg md:text-xl text-gray-300">
                     We turn ideas into seamless digital experiences.
                 </p>
