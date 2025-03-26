@@ -3,6 +3,7 @@ import { User } from '../../model/User.ts';
 import { useUser } from "../../hooks/UserContext.tsx";
 import SplitText from '../../widgets/SplitText/SplitText.tsx';
 import Aurora from '../../widgets/Aurora/Aurora.tsx';
+import { motion } from 'framer-motion';
 
 const PortfolioIntro = () => {
 
@@ -44,20 +45,23 @@ const PortfolioIntro = () => {
 
 
             <div className="absolute top-16 md:top-32 left-1/2 w-2/3 md:w-1/3 h-1/2 md:h-3/4
-            transform -translate-x-1/2 rounded-2xl overflow-hidden border-12 showdow:lg md:shadow-xl"
+            transform -translate-x-1/2 rounded-2xl overflow-hidden border-8 showdow:lg md:shadow-xl"
                 style={{
                     borderColor: user.primaryColor,
                     backgroundColor: user.primaryColor
                 }}>
-                <img
+                <motion.img
                     src={user.imageLocation}
                     className="object-cover w-full h-full rounded-xl"
+                    initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ duration: 0.6, ease: "easeIn" }}
                     alt="" />
             </div>
 
             {/* Text description at the bottom left */}
             <div className="absolute bottom-4 left-0 pl-4 md:pl-16 pb-24">
-                <p className="text-blackfont-normal line-clamp-4">
+                <p className="text-black font-normal line-clamp-4">
                     <TypewriterText text={user.slogan1}></TypewriterText>
 
                 </p>

@@ -29,7 +29,7 @@ const PortfolioRootPage = () => {
                     <PortfolioNavBar user={user} />
                 </div>
 
-                <div ref={containerRef} className="relative h-[200vh] overflow-y-auto">
+                <div ref={containerRef} className="relative h-[200vh]">
                     {/* Page 1 (Intro) - Fixed */}
                     <motion.div 
                         className="fixed top-20 md:top-22 left-0 w-full h-screen flex items-center justify-center z-0"
