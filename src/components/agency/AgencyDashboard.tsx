@@ -40,7 +40,7 @@ const AgencyDashboard = () => {
                     delay={150}
                     animateBy="words"
                     direction="top"
-                    className="text-3xl md:text-9xl font-alfaSlab leading-tight text-c"
+                    className="text-3xl  md:text-9xl font-alfaSlab leading-tight justify-center"s
                 />
                 <div className="mt-4">
                 <SplitText

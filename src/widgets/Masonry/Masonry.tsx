@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useMemo, useRef } from "react";
+import React, { useState, useEffect, useMemo, useRef, ReactNode } from "react";
 import { useTransition, a } from "@react-spring/web";
 
 interface MasonryItem {
   id: string | number;
   height: number;
-  image: string;
+  component: ReactNode; // Custom component
 }
 
 interface GridItem extends MasonryItem {
@@ -20,6 +20,8 @@ interface MasonryProps {
 
 function Masonry({ data }: MasonryProps) {
   const [columns, setColumns] = useState<number>(2);
+  const ref = useRef<HTMLDivElement>(null);
+  const [width, setWidth] = useState<number>(0);
 
   useEffect(() => {
     const updateColumns = () => {
@@ -38,9 +40,6 @@ function Masonry({ data }: MasonryProps) {
     window.addEventListener("resize", updateColumns);
     return () => window.removeEventListener("resize", updateColumns);
   }, []);
-
-  const ref = useRef<HTMLDivElement>(null);
-  const [width, setWidth] = useState<number>(0);
 
   useEffect(() => {
     const handleResize = () => {
@@ -96,15 +95,9 @@ function Masonry({ data }: MasonryProps) {
           style={style}
           className="absolute p-[15px] [will-change:transform,width,height,opacity]"
         >
-          <div
-            className="relative w-full h-full overflow-hidden uppercase text-[10px] leading-[10px] rounded-[4px] shadow-[0px_10px_50px_-10px_rgba(0,0,0,0.2)] transition duration-300 ease hover:scale-110"
-            style={{
-              backgroundColor: "#ffffff",
-              backgroundImage: `url(${item.image})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
+          <div className="relative w-full h-full rounded-[4px] shadow-lg overflow-hidden">
+            {item.component}
+          </div>
         </a.div>
       ))}
     </div>

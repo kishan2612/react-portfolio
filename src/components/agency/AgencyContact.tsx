@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SpotlightCard from "../../widgets/SpotlightCard/SpotlightCard";
 
 
 const AgencyContact = () => {
@@ -9,7 +10,7 @@ const AgencyContact = () => {
                 className="absolute inset-0 w-full h-full"
             />
 
-            <div className="relative z-10 text-center space-y-12">
+            <div className="relative text-center space-y-12">
                 {/* Title */}
                 <h1 className="text-5xl md:text-9xl text-white leading-none font-alfaSlab">
                     Let's Collaborate!
@@ -20,12 +21,14 @@ const AgencyContact = () => {
                     Whether it's a website, app, or design system, let's build something amazing together.
                 </p>
                 {/* Contact Form */}
+                
                 <motion.form
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="max-w-2xl mx-auto bg-white/15 backdrop-blur-md p-8 md:p-12 rounded-2xl shadow-xl space-y-6"
+                    className="max-w-2xl mx-auto "
                 >
+                    <SpotlightCard className=" bg-white/15 p-8 md:p-12 rounded-2xl shadow-xl space-y-6">
                     {/* Name Field */}
                     <div className="flex flex-col text-left">
                         <label className="text-white text-lg font-medium">Your Name</label>
@@ -64,6 +67,7 @@ const AgencyContact = () => {
                     >
                         Submit
                     </motion.button>
+                    </SpotlightCard>
                 </motion.form>
             </div>
         </section>

@@ -7,7 +7,7 @@ import AgencyContact from "./AgencyContact.tsx";
 import {AgencyConstants} from "../../constants/AgencyConstants.ts";
 
 const AgencyPage2 = () => {
-    return <div className="bg-gray-800  mx-auto space-y-16 md:space-y-24 pt-16 md:pt-24"
+    return <div className="bg-zinc-900  mx-auto space-y-16 md:space-y-24 pt-16 md:pt-24"
                 style={{
                     borderTopLeftRadius: 32,
                     borderTopRightRadius: 32,
