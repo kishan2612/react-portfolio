@@ -20,6 +20,10 @@ import idf1 from "../assets/idfye/idf-1.png";
 import idf2 from "../assets/idfye/idf-2.png";
 import idf3 from "../assets/idfye/idf-3.png";
 
+import tvDemo1 from "../assets/tv-demo/tv-demo-1.png";
+import tvDemo2 from "../assets/tv-demo/tv-demo-2.png";
+
+
 
 
 import agencyDashboardAbstract from "../assets/agency/dashboard-abstract.webm";
@@ -50,6 +54,9 @@ export class KishanAssetLocation {
     static readonly idf1: string = idf1;
     static readonly idf2: string = idf2;
     static readonly idf3: string = idf3;
+
+    static readonly tvDemo1:string = tvDemo1;
+    static readonly tvDemo2:string = tvDemo2;
 }
 
 export  class VideoAssets{

@@ -141,13 +141,13 @@ const kishanProjects: Project[] = [
     {
         id: "k-5",
         projectName: "Mi Smart Demo",
-        mainImageLocation: AssetLocation.projectPlaceHolderImage,
+        mainImageLocation: KishanAssetLocation.tvDemo1,
         shortDescription: "Mi Smart Demo is an in-house retail demo application designed for Xiaomi offline stores, " +
             "running across smartphones, tablets, TVs, and laptops. It showcases promotions, offers, and marketing content " +
             "while seamlessly integrating with Mi Retail for a connected user experience.",
         role: "Mobile Application Developer",
         duration: "2022",
-        screenshots: [],
+        screenshots: [KishanAssetLocation.tvDemo1, KishanAssetLocation.tvDemo2],
         technologies: ["Flutter", "Dart", "Kotlin","Exo Player", "Foreground Services", "Background Jobs"],
         features: ["Multi-Device Compatibility", "Offline Promotions & Offers", "Real-Time CMS Integration",
             "Barcode-Based Login via Mi Retail", "Smart Background & Foreground Services"],
