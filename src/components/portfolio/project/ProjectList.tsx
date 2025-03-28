@@ -24,7 +24,7 @@ const ProjectCard = ({value}: { value: Project }) => {
     const user: User = useUser();
 
     const handleNavigation = () => {
-        navigate(`/works/${value.id}`); // Converts "Case 01" to "Case_01"
+        navigate(`/works/${value.id}`); 
     };
     return <button
         key={value.id}
@@ -47,7 +47,7 @@ const ProjectCard = ({value}: { value: Project }) => {
             <img src={value.mainImageLocation}
                  alt={value.projectName}
                  className="w-full object-cover rounded-t-2xl md:rounded-t-3xl transition-transform duration-500
-                                   group-hover:scale-105 group-hover:translate-y-1 md:translate-y-2"
+                                   group-hover:scale-105"
             />
         </div>
 

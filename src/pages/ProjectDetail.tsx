@@ -2,7 +2,7 @@ import {useParams} from "react-router-dom";
 import {getSelectedUser, getUserSelectedProject} from "../components/portfolio/project/UserProject.ts";
 import {Project} from "../model/Project.ts";
 import PortfolioNavBar from "../components/portfolio/PortfolioNavBar.tsx";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {motion} from "framer-motion";
 import {User} from "../model/User.ts";
 
@@ -12,19 +12,23 @@ const ProjectDetailPage = () => {
 
     const user: User | undefined | null = getSelectedUser(projectId!);
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+    
     if (projectId && user) {
         const project: Project | undefined | null = getUserSelectedProject(projectId,user)
 
         if (project) {
             return (
-                <div className="w-full  min-h-screen bg-black text-white font-sans">
+                <div className="w-full bg-black text-white font-sans">
                     Navigation Bar1
                     <header className="fixed top-0 left-0 w-full">
                         <PortfolioNavBar user={user} showActionItems={false}/>
                     </header>
 
                     {/* Main Content */}
-                    <div className=" mx-auto  px-16 md:px-16 pb-24 pt-28">
+                    <div className=" px-16 md:px-16 pb-24 pt-20">
                         {/* Project Name */}
                         <h1 className="md:text-6xl font-bold mb-6 md:mb-12 mt-8 md:mt-16 text-start font-alfaSlab text-6xl">{project.projectName}</h1>
 
